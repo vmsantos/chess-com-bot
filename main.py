@@ -36,7 +36,7 @@ def start_bot_game():
     password = driver.find_elements_by_xpath("/html/body/div[1]/div/main/div[1]/form/div[2]/input")[0]
     password.send_keys("password")
     password.send_keys(Keys.RETURN)
-    time.sleep(1)
+        time.sleep(1)
     url = 'https://www.chess.com/play/computer'
     driver.get(url)
     time.sleep(2)
@@ -45,8 +45,8 @@ def start_bot_game():
         popup[0].click()
     time.sleep(2)
     WebDriverWait(driver, 20).until(expected_conditions.presence_of_element_located(
-        (By.XPATH, "/html/body/div[2]/div[6]/div/div/span")))
-    button = driver.find_elements_by_xpath("/html/body/div[2]/div[6]/div/div/span")[0]
+        (By.XPATH, "/html/body/div[2]/div[7]/div/div/span")))
+    button = driver.find_elements_by_xpath("/html/body/div[2]/div[7]/div/div/span")[0]
     button.click()
     time.sleep(2)
     driver.refresh()
@@ -57,8 +57,8 @@ def start_bot_game():
     driver.find_elements_by_xpath("/html/body/div[4]/div[1]/section/div/div[2]/div[1]/div/div[1]/div/span[1]")[
         0].click()
     time.sleep(1)
-    button = driver.find_elements_by_xpath("/html/body/div[14]/div/div/button")
-    button[0].click()
+    #button = driver.find_elements_by_xpath("/html/body/div[14]/div/div/button")
+    #button[0].click()
 
     button = driver.find_elements_by_xpath("/html/body/div[4]/div[1]/div[2]/button")
     button[0].click()
